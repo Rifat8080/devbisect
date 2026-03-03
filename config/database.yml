@@ -24,7 +24,6 @@ test:
   <<: *default
   database: devbisect_test
 
-
 # Store production database configuration
 production:
   primary:
