@@ -1,0 +1,150 @@
+# Ignore bundler config.
+/.bundle
+/vendor/bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-*
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+/tmp/pids/*
+!/tmp/pids/.keep
+
+# Ignore pidfiles, but keep the directory.
+/tmp/sockets/*
+!/tmp/sockets/.keep
+
+# Ignore storage
+/storage/*
+!/storage/.keep
+
+# Ignore temporary files
+/tmp/cache/*
+!/tmp/cache/.keep
+
+# Ignore uploaded files in development
+/storage
+
+# Ignore master key for decrypting credentials.
+/config/master.key
+
+# Ignore environment variables
+.env
+.env.local
+.env.*.local
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# RubyMine
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+.vim/
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Bundler
+.bundle/
+vendor/bundle/
+
+# Binstubs
+/bin/*
+!/bin/rails
+!/bin/rake
+!/bin/setup
+!/bin/dev
+!/bin/importmap
+!/bin/jobs
+
+# Ruby version managers
+.rbenv-version
+.ruby-version
+.rvmrc
+
+# Node modules (for JavaScript)
+/node_modules/
+/yarn-error.log
+
+# Passenger
+/public/javascripts/
+/public/stylesheets/
+
+# Cache files
+.cache/
+
+# Docker
+.kamal/secrets
+
+# Dependencies
+/lib/bundle/
+
+# Test coverage
+/coverage/
+*.lcov
+
+# Yarn
+yarn-debug.log*
+yarn-error.log*
+
+# NPM
+npm-debug.log*
+package-lock.json
+
+# Pry
+.pry_history
+
+# Byebug
+.byebug_history
+
+# Rubymine
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Mac files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux files
+.~*
+
+# Windows files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Build artifacts
+*.o
+*.so
+*.gem
+
+# Gemfile lock
+Gemfile.lock
+
+# Kamal
+.kamal/secrets
+config/deploy.yml
