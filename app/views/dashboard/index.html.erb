@@ -1,0 +1,125 @@
+<div class="grid gap-6">
+  <!-- Welcome Section -->
+  <div class="bg-base-100 p-6 rounded-lg shadow">
+    <h2 class="text-2xl font-bold mb-2">Welcome back, <%= current_user.email %>!</h2>
+    <p class="text-base-content/70">Here's what's happening with your projects today.</p>
+  </div>
+
+  <!-- Stats Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="stat bg-base-100 rounded-lg shadow">
+      <div class="stat-figure text-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+      </div>
+      <div class="stat-title">Total Projects</div>
+      <div class="stat-value text-primary">12</div>
+      <div class="stat-desc">21% more than last month</div>
+    </div>
+
+    <div class="stat bg-base-100 rounded-lg shadow">
+      <div class="stat-figure text-secondary">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+        </svg>
+      </div>
+      <div class="stat-title">Active Users</div>
+      <div class="stat-value text-secondary">4,200</div>
+      <div class="stat-desc">↗︎ 400 (22%)</div>
+    </div>
+
+    <div class="stat bg-base-100 rounded-lg shadow">
+      <div class="stat-figure text-success">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+        </svg>
+      </div>
+      <div class="stat-title">Tasks Completed</div>
+      <div class="stat-value text-success">89%</div>
+      <div class="stat-desc">+5% from last week</div>
+    </div>
+
+    <div class="stat bg-base-100 rounded-lg shadow">
+      <div class="stat-figure text-info">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+        </svg>
+      </div>
+      <div class="stat-title">Performance</div>
+      <div class="stat-value text-info">95%</div>
+      <div class="stat-desc">System uptime</div>
+    </div>
+  </div>
+
+  <!-- Recent Activity -->
+  <div class="bg-base-100 rounded-lg shadow">
+    <div class="p-6 border-b border-base-300">
+      <h3 class="text-xl font-semibold">Recent Activity</h3>
+    </div>
+    <div class="divide-y divide-base-300">
+      <div class="p-6 flex items-center gap-4">
+        <div class="avatar placeholder">
+          <div class="bg-primary text-primary-content rounded-full w-12">
+            <span class="text-xl">JD</span>
+          </div>
+        </div>
+        <div class="flex-1">
+          <p class="font-semibold">John Doe</p>
+          <p class="text-sm text-base-content/70">Created a new project: Website Redesign</p>
+        </div>
+        <div class="text-sm text-base-content/70">2 hours ago</div>
+      </div>
+
+      <div class="p-6 flex items-center gap-4">
+        <div class="avatar placeholder">
+          <div class="bg-secondary text-secondary-content rounded-full w-12">
+            <span class="text-xl">SA</span>
+          </div>
+        </div>
+        <div class="flex-1">
+          <p class="font-semibold">Sarah Anderson</p>
+          <p class="text-sm text-base-content/70">Completed task: Update database schema</p>
+        </div>
+        <div class="text-sm text-base-content/70">5 hours ago</div>
+      </div>
+
+      <div class="p-6 flex items-center gap-4">
+        <div class="avatar placeholder">
+          <div class="bg-accent text-accent-content rounded-full w-12">
+            <span class="text-xl">MJ</span>
+          </div>
+        </div>
+        <div class="flex-1">
+          <p class="font-semibold">Mike Johnson</p>
+          <p class="text-sm text-base-content/70">Uploaded new documents</p>
+        </div>
+        <div class="text-sm text-base-content/70">1 day ago</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Actions -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <button class="btn btn-primary btn-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+      </svg>
+      New Project
+    </button>
+    
+    <button class="btn btn-secondary btn-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+      </svg>
+      Invite Team
+    </button>
+    
+    <button class="btn btn-accent btn-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+      Generate Report
+    </button>
+  </div>
+</div>

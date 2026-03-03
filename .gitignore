@@ -1,6 +1,10 @@
 # Ignore bundler config.
 /.bundle
 /vendor/bundle
+extensions
+specifications
+tmp
+gems
 
 # Ignore the default SQLite database.
 /db/*.sqlite3

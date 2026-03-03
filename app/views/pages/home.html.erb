@@ -1,103 +1,211 @@
-<div class="px-6 py-12">
-  <!-- Header -->
-  <div class="mb-12">
-    <h1 class="text-4xl font-bold mb-4">Devbisect</h1>
-    <p class="text-xl text-gray-600">Rails 8 with Flowbite & Daisy UI Components</p>
-  </div>
-
-  <!-- Daisy UI Components -->
-  <div class="mb-12">
-    <h2 class="text-2xl font-semibold mb-6">Daisy UI Components</h2>
-    
-    <!-- Buttons -->
-    <div class="mb-8">
-      <h3 class="text-lg font-semibold mb-4">Buttons</h3>
-      <div class="flex gap-4 flex-wrap">
-        <button class="btn btn-primary">Primary</button>
-        <button class="btn btn-secondary">Secondary</button>
-        <button class="btn btn-success">Success</button>
-        <button class="btn btn-warning">Warning</button>
-        <button class="btn btn-error">Error</button>
-      </div>
-    </div>
-
-    <!-- Cards -->
-    <div class="mb-8">
-      <h3 class="text-lg font-semibold mb-4">Cards</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="card bg-base-100 shadow-xl">
-          <div class="card-body">
-            <h2 class="card-title">Card 1</h2>
-            <p>This is a Daisy UI card component</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Learn more</button>
-            </div>
-          </div>
-        </div>
-        <div class="card bg-base-100 shadow-xl">
-          <div class="card-body">
-            <h2 class="card-title">Card 2</h2>
-            <p>Fully styled with Daisy UI</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Learn more</button>
-            </div>
-          </div>
-        </div>
-        <div class="card bg-base-100 shadow-xl">
-          <div class="card-body">
-            <h2 class="card-title">Card 3</h2>
-            <p>No extra CSS needed</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Learn more</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Badge -->
-    <div class="mb-8">
-      <h3 class="text-lg font-semibold mb-4">Badge & Pills</h3>
-      <div class="flex gap-4 flex-wrap">
-        <div class="badge">Default</div>
-        <div class="badge badge-primary">Primary</div>
-        <div class="badge badge-secondary">Secondary</div>
-        <div class="badge badge-success">Success</div>
+<!-- Hero Section -->
+<div class="hero min-h-[600px] bg-gradient-to-r from-primary to-secondary">
+  <div class="hero-content text-center text-primary-content">
+    <div class="max-w-4xl">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6">Welcome to Devbisect</h1>
+      <p class="text-xl md:text-2xl mb-8">Build amazing applications with Rails 8, Tailwind CSS, and modern UI components</p>
+      <div class="flex gap-4 justify-center flex-wrap">
+        <% if user_signed_in? %>
+          <%= link_to "Go to Dashboard", dashboard_path, class: "btn btn-lg btn-neutral" %>
+        <% else %>
+          <%= link_to "Get Started", new_user_registration_path, class: "btn btn-lg btn-neutral" %>
+          <%= link_to "Sign In", new_user_session_path, class: "btn btn-lg btn-outline btn-neutral" %>
+        <% end %>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Flowbite Components -->
-  <div class="mb-12">
-    <h2 class="text-2xl font-semibold mb-6">Flowbite Components</h2>
-    
-    <!-- Alert -->
-    <div class="mb-8">
-      <h3 class="text-lg font-semibold mb-4">Alerts</h3>
-      <div id="alert-border-1" class="p-4 mb-4 text-blue-800 border-t-4 border-blue-300 bg-blue-50 dark:text-blue-400 dark:bg-gray-800 dark:border-blue-800" role="alert">
-        <p class="font-bold">Info alert</p>
-        <div class="text-sm">This is a Flowbite alert component</div>
-      </div>
-      <div id="alert-border-2" class="p-4 mb-4 text-green-800 border-t-4 border-green-300 bg-green-50 dark:text-green-400 dark:bg-gray-800 dark:border-green-800" role="alert">
-        <p class="font-bold">Success alert</p>
-        <div class="text-sm">Operation completed successfully</div>
-      </div>
+<!-- Features Section -->
+<div class="py-20 px-6 bg-base-100">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4">Features</h2>
+      <p class="text-xl text-base-content/70">Everything you need to build modern web applications</p>
     </div>
 
-    <!-- Dropdown -->
-    <div class="mb-8">
-      <h3 class="text-lg font-semibold mb-4">Dropdown Menu</h3>
-      <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-        Dropdown menu 
-        <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-        </svg>
-      </button>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="card bg-base-200 shadow-xl">
+        <div class="card-body items-center text-center">
+          <div class="text-5xl mb-4">🚀</div>
+          <h3 class="card-title">Lightning Fast</h3>
+          <p>Built on Rails 8 with modern best practices for optimal performance</p>
+        </div>
+      </div>
 
-      <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+      <div class="card bg-base-200 shadow-xl">
+        <div class="card-body items-center text-center">
+          <div class="text-5xl mb-4">🎨</div>
+          <h3 class="card-title">Beautiful UI</h3>
+          <p>Tailwind CSS with Flowbite and Daisy UI components out of the box</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-200 shadow-xl">
+        <div class="card-body items-center text-center">
+          <div class="text-5xl mb-4">🔒</div>
+          <h3 class="card-title">Secure</h3>
+          <p>Built-in authentication with Devise and security best practices</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-200 shadow-xl">
+        <div class="card-body items-center text-center">
+          <div class="text-5xl mb-4">📱</div>
+          <h3 class="card-title">Responsive</h3>
+          <p>Mobile-first design that works perfectly on all devices</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-200 shadow-xl">
+        <div class="card-body items-center text-center">
+          <div class="text-5xl mb-4">⚡</div>
+          <h3 class="card-title">Real-time</h3>
+          <p>Hotwire Turbo for seamless page transitions and updates</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-200 shadow-xl">
+        <div class="card-body items-center text-center">
+          <div class="text-5xl mb-4">🗄️</div>
+          <h3 class="card-title">PostgreSQL</h3>
+          <p>Powerful database with UUID primary keys by default</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pricing Section -->
+<div class="py-20 px-6 bg-base-200" id="pricing">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4">Pricing</h2>
+      <p class="text-xl text-base-content/70">Choose the plan that's right for you</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+          <h3 class="card-title text-2xl">Starter</h3>
+          <div class="text-4xl font-bold my-4">$9<span class="text-xl font-normal">/mo</span></div>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Up to 5 projects</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>5 GB storage</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Basic support</span>
+            </li>
+          </ul>
+          <div class="card-actions justify-end mt-6">
+            <button class="btn btn-primary btn-block">Get Started</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-primary text-primary-content shadow-2xl transform scale-105">
+        <div class="badge badge-secondary absolute top-4 right-4">Popular</div>
+        <div class="card-body">
+          <h3 class="card-title text-2xl">Professional</h3>
+          <div class="text-4xl font-bold my-4">$29<span class="text-xl font-normal">/mo</span></div>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Unlimited projects</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>50 GB storage</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Priority support</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Advanced analytics</span>
+            </li>
+          </ul>
+          <div class="card-actions justify-end mt-6">
+            <button class="btn btn-neutral btn-block">Get Started</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+          <h3 class="card-title text-2xl">Enterprise</h3>
+          <div class="text-4xl font-bold my-4">$99<span class="text-xl font-normal">/mo</span></div>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Unlimited everything</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>500 GB storage</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>24/7 dedicated support</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Custom integrations</span>
+            </li>
+          </ul>
+          <div class="card-actions justify-end mt-6">
+            <button class="btn btn-primary btn-block">Contact Sales</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA Section -->
+<div class="py-20 px-6 bg-base-100">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-6">Ready to get started?</h2>
+    <p class="text-xl text-base-content/70 mb-8">Join thousands of developers building amazing applications</p>
+    <div class="flex gap-4 justify-center flex-wrap">
+      <% if user_signed_in? %>
+        <%= link_to "Go to Dashboard", dashboard_path, class: "btn btn-lg btn-primary" %>
+      <% else %>
+        <%= link_to "Get Started Free", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+        <%= link_to "View Demo", "#", class: "btn btn-lg btn-outline" %>
+      <% end %>
+    </div>
+  </div>
+</div>
           </li>
           <li>
             <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
