@@ -9,10 +9,11 @@ export default class extends Controller {
     this.animationFrame = null
     this.speed = window.innerWidth < 640 ? 0.45 : 0.65
 
-    requestAnimationFrame(() => {
+    // Start animation immediately on next tick
+    setTimeout(() => {
       this.groupWidth = this.groupTarget.scrollWidth
       this.start()
-    })
+    }, 0)
   }
 
   disconnect() {
