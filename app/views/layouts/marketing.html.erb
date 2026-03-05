@@ -23,57 +23,175 @@
 
   <body data-controller="flowbite" class="antialiased">
     <!-- Marketing Navigation -->
-    <nav class="bg-white shadow-sm fixed w-full z-50">
-      <div class="container mx-auto px-4">
-        <div class="navbar">
-          <div class="flex-1">
-            <%= link_to root_path, class: "flex items-center space-x-2" do %>
-              <span class="text-2xl font-bold text-primary">Devbisect</span>
+    <nav class="bg-[#F4F2FD]/95 backdrop-blur-sm border-b border-gray-200 fixed w-full z-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between h-[62px]">
+          
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <%= link_to root_path, class: "flex items-center space-x-2.5 group" do %>
+              <div class="relative w-7 h-7">
+                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none">
+                  <rect x="2" y="2" width="9" height="9" rx="1.5" fill="#8B5CF6"/>
+                  <rect x="13" y="2" width="9" height="9" rx="1.5" fill="#A78BFA"/>
+                  <rect x="2" y="13" width="9" height="9" rx="1.5" fill="#6366F1"/>
+                  <rect x="13" y="13" width="9" height="9" rx="1.5" fill="#818CF8"/>
+                </svg>
+              </div>
+              <span class="text-lg font-semibold tracking-[-0.01em] text-gray-900">Auregon</span>
             <% end %>
           </div>
-          
-          <!-- Desktop Navigation -->
-          <div class="flex-none hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
-              <li><a href="#features" class="hover:text-primary">Features</a></li>
-              <li><a href="#pricing" class="hover:text-primary">Pricing</a></li>
-              <li><a href="#about" class="hover:text-primary">About</a></li>
-              <li><a href="#contact" class="hover:text-primary">Contact</a></li>
-            </ul>
+
+          <!-- Desktop Navigation - Centered -->
+          <div class="hidden lg:flex items-center justify-center flex-1">
+            <div class="flex items-center space-x-6">
+              <!-- Home -->
+              <div class="relative group">
+                <%= link_to root_path, class: "inline-flex items-center gap-1 px-1 py-2 text-[13px] font-medium text-indigo-600" do %>
+                  <span>Home</span>
+                  <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                <% end %>
+              </div>
+              
+              <!-- Pages Dropdown -->
+              <div class="relative group">
+                <button class="flex items-center space-x-1 px-2 py-2 text-[13px] font-medium text-gray-800 hover:text-gray-900 transition-colors duration-200">
+                  <span>Pages</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+                  <div class="bg-white rounded-lg shadow-lg border border-gray-100 py-2">
+                    <a href="#" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">About Us</a>
+                    <a href="#" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Team</a>
+                    <a href="#" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Careers</a>
+                    <a href="#pricing" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Pricing</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Services Dropdown -->
+              <div class="relative group">
+                <button class="flex items-center space-x-1 px-2 py-2 text-[13px] font-medium text-gray-800 hover:text-gray-900 transition-colors duration-200">
+                  <span>Services</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+                  <div class="bg-white rounded-lg shadow-lg border border-gray-100 py-2">
+                    <a href="#" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">AI Consulting</a>
+                    <a href="#" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Machine Learning</a>
+                    <a href="#" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Data Analytics</a>
+                    <a href="#" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Automation</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Projects Dropdown -->
+              <div class="relative group">
+                <button class="flex items-center space-x-1 px-2 py-2 text-[13px] font-medium text-gray-800 hover:text-gray-900 transition-colors duration-200">
+                  <span>Projects</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+                  <div class="bg-white rounded-lg shadow-lg border border-gray-100 py-2">
+                    <a href="#projects" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">All Projects</a>
+                    <a href="#" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Case Studies</a>
+                    <a href="#" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Portfolio</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Blog Dropdown -->
+              <div class="relative group">
+                <button class="flex items-center space-x-1 px-2 py-2 text-[13px] font-medium text-gray-800 hover:text-gray-900 transition-colors duration-200">
+                  <span>Blog</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </button>
+                <div class="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+                  <div class="bg-white rounded-lg shadow-lg border border-gray-100 py-2">
+                    <a href="#" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Latest Posts</a>
+                    <a href="#" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">AI Insights</a>
+                    <a href="#" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Tech News</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contact -->
+              <a href="#contact" class="px-2 py-2 text-[13px] font-medium text-gray-800 hover:text-gray-900 transition-colors duration-200">Contact</a>
+            </div>
           </div>
 
-          <div class="flex-none gap-2">
+          <!-- Right Side Actions -->
+          <div class="flex items-center space-x-4">
             <% if user_signed_in? %>
-              <%= link_to "Dashboard", dashboard_path, class: "btn btn-primary" %>
-              <div class="dropdown dropdown-end">
-                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-                  <div class="w-10 rounded-full bg-primary text-white flex items-center justify-center">
+              <!-- User Dropdown -->
+              <div class="relative group">
+                <button class="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-indigo-600 transition-colors duration-200 rounded-lg hover:bg-gray-50">
+                  <div class="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xs font-semibold">
                     <%= current_user.email.first.upcase %>
                   </div>
-                </label>
-                <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 mt-3">
-                  <li><%= link_to "Dashboard", dashboard_path %></li>
-                  <li><%= link_to "Profile", edit_user_registration_path %></li>
-                  <li><%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete } %></li>
-                </ul>
+                </button>
+                <div class="absolute right-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+                  <div class="bg-white rounded-lg shadow-lg border border-gray-100 py-2">
+                    <%= link_to dashboard_path, class: "block px-4 py-2.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors" do %>
+                      Dashboard
+                    <% end %>
+                    <%= link_to edit_user_registration_path, class: "block px-4 py-2.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors" do %>
+                      Profile
+                    <% end %>
+                    <%= link_to destroy_user_session_path, data: { turbo_method: :delete }, class: "block px-4 py-2.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors" do %>
+                      Sign Out
+                    <% end %>
+                  </div>
+                </div>
               </div>
             <% else %>
-              <%= link_to "Sign In", new_user_session_path, class: "btn btn-ghost" %>
-              <%= link_to "Get Started", new_user_registration_path, class: "btn btn-primary" %>
+              <!-- Get Started Button -->
+              <div class="flex items-center space-x-3">
+                <%= link_to new_user_registration_path, class: "hidden lg:inline-flex items-center px-7 py-2.5 text-white text-sm font-semibold rounded-xl transition-all duration-200 shadow-[0_8px_20px_rgba(99,102,241,0.25)]", style: "background: linear-gradient(90deg, #8B5CF6 0%, #60A5FA 100%);" do %>
+                  Get Started
+                <% end %>
+                
+                <!-- Bot Icon -->
+                <button class="flex h-10 w-10 items-center justify-center rounded-full border border-indigo-200 bg-[#F4F2FD] text-indigo-500 transition-colors duration-200 hover:bg-white">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <rect x="6" y="8" width="12" height="9" rx="3" stroke-width="2"/>
+                    <path d="M12 5v3M9.5 12h.01M14.5 12h.01" stroke-linecap="round" stroke-width="2"/>
+                  </svg>
+                </button>
+              </div>
             <% end %>
 
-            <!-- Mobile menu button -->
-            <div class="dropdown dropdown-end lg:hidden">
-              <label tabindex="0" class="btn btn-ghost">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
-              </label>
-              <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 mt-3">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div>
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+              <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden pb-4">
+          <div class="flex flex-col space-y-2">
+            <%= link_to "Home", root_path, class: "px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg" %>
+            <a href="#" class="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Pages</a>
+            <a href="#" class="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Services</a>
+            <a href="#projects" class="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Projects</a>
+            <a href="#" class="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Blog</a>
+            <a href="#contact" class="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Contact</a>
+            <% unless user_signed_in? %>
+              <%= link_to "Get Started", new_user_registration_path, class: "px-4 py-2 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg text-center" %>
+            <% end %>
           </div>
         </div>
       </div>
